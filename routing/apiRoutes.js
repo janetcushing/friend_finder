@@ -6,9 +6,12 @@
 
 var friendData = require("../data/friendData");
 var express = require("express");
+var serve   = require('express-static');
 var bodyParser = require("body-parser");
 var jsonParser = bodyParser.json()
 var app = express();
+app.use(serve(__dirname + '/public'));
+var minScore = [];
 
 
 // ===============================================================================
@@ -52,11 +55,11 @@ module.exports = function (app) {
     friendData.push(newFriend);
 
   });
-
+ 
 
   function compareFriendsForCompatibility(newFriend) {
     var difference = [];
-    var minScore = [];
+   
     minScore.name = friendData[0].name;
     minScore.photo = friendData[0].photo;
     minScore.total = 9999;
@@ -103,7 +106,7 @@ module.exports = function (app) {
         app.post("/survey", function (req, res) {
           console.log("im about to post to /survey");
           console.log("posting: " + minScore.name + " " + minScore.photo);
-          res.send({
+          res.json({
             name: minScore.name,
             photo: minScore.photo
           });
