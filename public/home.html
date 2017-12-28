@@ -3,54 +3,92 @@
 	<title>FriendFinder</title>
 
 	<!-- Latest compiled and minified CSS & JS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	    crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+	    crossorigin="anonymous"></script>
 
 	<!-- Font Awesome Glyphicons -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
 </head>
 
-<html lang="en"><head>
+<html lang="en">
+
+<head>
 	<meta charset="UTF-8">
 	<title>FriendFinder</title>
 
 	<!-- Latest compiled and minified CSS & JS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	    crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+	    crossorigin="anonymous"></script>
 
 	<!-- Font Awesome Glyphicons -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
 </head>
+
 <body>
 
 	<div class="container">
-		
+
 		<div class="jumbotron">
-			<h1 class=""><i class="fa fa-facebook-square" aria-hidden="true"></i> Friend Finder</h1>
+			<h1 class="">
+				<i class="fa fa-facebook-square" aria-hidden="true"></i> Friend Finder</h1>
 			<hr>
 			<h2 class="">Answer a few basic questions. </h2>
 			<h2 class="">Then find the friend with the greatest compatibility!</h2>
 			<br>
 
 			<div class="">
-				<a href="/survey"><button type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-list-alt"></span> Go to Survey</h4></button></a>	
+				<a href="/survey">
+					<button type="button" class="btn btn-lg btn-primary">
+						<h4>
+							<span class="glyphicon glyphicon-list-alt"></span> Go to Survey</h4>
+					</button>
+				</a>
 			</div>
 
 		</div>
 
-	    <footer class="footer">
-	      <div class="container">
-                <p><a href="/api/friends">API Friends List</a> |
-                     <a href="https://github.com/janetcushing/friend_finder">GitHub Repo</a></p>
-	      </div>
-	    </footer>
+		<footer class="footer">
+			<div class="container">
+				<p>
+					<a href="/api/friends">API Friends List</a> |
+					<a href="https://github.com/janetcushing/friend_finder">GitHub Repo</a>
+				</p>
+			</div>
+		</footer>
 
 	</div>
 
+	<script type="text/javascript">
+		$("#search-btn").on("click", function() {
+		  var searchedCharacter = $("#character-search").val().trim();
 	
+		  searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
+	
+		  $.get("/api/" + searchedCharacter, function(data) {
+			console.log(data);
+			if (data) {
+			  $("#stats").show();
+			  $("#name").text(data.name);
+			  $("#role").text(data.role);
+			  $("#age").text(data.age);
+			  $("#force-points").text(data.forcePoints);
+			}
+			else {
+			  $("#name").text("The force is not strong with this one. Your character was not found.");
+			  $("#stats").hide();
+			}
+		  });
+		});
+	  </script>
 
-</body></html>
+</body>
+
+</html>
