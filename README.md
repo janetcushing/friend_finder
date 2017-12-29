@@ -9,7 +9,7 @@ Tweety:
 https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Tweety.svg/570px-Tweety.svg.png
 
 Goofy:
-https://www.google.com/search?q=goofy&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi-iqjg4a3YAhUE2oMKHWwQBhkQ_AUICigB&biw=1278&bih=864#imgrc=H_adJQZVWEbdwM:
+https://vignette.wikia.nocookie.net/disney/images/2/27/Goofy_transparent.png/revision/latest?cb=20170426165903
 
 Pikachu:
 https://vignette.wikia.nocookie.net/youtubepoop/images/f/f7/5Pikachu.png/revision/latest?cb=20141108062013

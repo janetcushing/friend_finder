@@ -1,6 +1,6 @@
 var seedData = [{
         "name": "Ahmed",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo": "https://pmcdeadline2.files.wordpress.com/2017/08/riz-ahmed.jpg?w=446&h=299&crop=1",
         "scores": [
             "5",
             "1",
@@ -64,7 +64,7 @@ var seedData = [{
     },
     {
         "name": "Lou Ritter",
-        "photo": "https://m.facebook.com/photo.php?fbid=10208500699025296&id=1542229019&set=a.1549418665704.77596.1542229019&source=11",
+        "photo": "http://www.ecigadvanced.com/blog/wp-content/uploads/2014/01/LR-avatar.jpg",
         "scores": [
             "4",
             "3",
@@ -80,7 +80,7 @@ var seedData = [{
     },
     {
         "name": "Jordan Biason",
-        "photo": "https://scontent-ord1-1.xx.fbcdn.net/v/t1.0-9/12741971_10205764267089153_4212986785721953092_n.jpg?oh=4e18265f7d380167223a97fbd7eba278&oe=57B78445",
+        "photo": "https://lh4.googleusercontent.com/-fZIGYBuyH5M/AAAAAAAAAAI/AAAAAAAAAZg/Eq6utMkPP8E/photo.jpg",
         "scores": [
             "4",
             "4",
@@ -96,39 +96,7 @@ var seedData = [{
     },
     {
         "name": "Joe Scmoe",
-        "photo": "https://giphy.com/gifs/hbsc-christmas-xUOxfo8KL02JYaeAiA",
-        "scores": [
-            "5",
-            "3",
-            "3",
-            "1",
-            "3",
-            "1",
-            "3",
-            "2",
-            "3",
-            "3"
-        ]
-    },
-    {
-        "name": "Joe Scmoe",
-        "photo": "https://giphy.com/gifs/hbsc-christmas-xUOxfo8KL02JYaeAiA",
-        "scores": [
-            "5",
-            "3",
-            "3",
-            "1",
-            "3",
-            "1",
-            "3",
-            "2",
-            "3",
-            "3"
-        ]
-    },
-    {
-        "name": "Joe Scmoe",
-        "photo": "https://giphy.com/gifs/hbsc-christmas-xUOxfo8KL02JYaeAiA",
+        "photo": "https://pbs.twimg.com/profile_images/780535278964510720/r2t9te1-.jpg",
         "scores": [
             "5",
             "3",
