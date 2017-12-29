@@ -1,6 +1,9 @@
 # friend_finder
 an application to match friends based on their answers to questions 
 
+You can access this application at: https://aqueous-brook-96796.herokuapp.com/
+
+Enter your name and a link to a photo of you, and answer the 10 questions and when you hit the submit button, a friend who's answers most closely match your answers will be displayed.
 
 
 Some test data image links:
